@@ -1,69 +1,69 @@
 
-const italian = {
-    id: 'italian',
-    name: 'italian'
-    image: 
-    description: 'Bittersweet, with notes of vanilla',
+const cappuchino = {
+    id: 'cappuchino',
+    name: 'cappuchino',
+    image: 'cappuchino.jpeg',
+    description: 'espresso with steamed milk on top',
     category: 'coffee-style',
-    price: 14.00
+    price: 4.00
 };
-const french = {
-    id: 'french',
-    name: 'french'
-    image: ,
-    description: 'bold roasted flavor, jammy ',
+const macchiato = {
+    id: 'macchiato',
+    name: 'macchiato',
+    image: 'macchiato.jpeg',
+    description: 'espresso with milk foam on top',
     category: 'coffee-style',
-    price: 14.00
+    price: 4.00
 };
-const ethiopian = {
-    id: 'ethiopian',
-    name: 'ethiopian'
-    image: ,
-    description: 'cardamom and clove, smoky',
+const pourOver = {
+    id: 'pour-over',
+    name: 'pour-over',
+    image: 'pour-over.jpeg',
+    description: 'dark roast brewed with chemex',
     category: 'coffee-style',
-    price: 15.00
+    price: 3.00
 };
-const guatemalan = {
-    id: 'guatemalan',
-    name: 'guatemalan'
-    image: ,
-    description: 'lightly roasted with notes of chocolate',
+const drip = {
+    id: 'drip',
+    name: 'drip',
+    image: 'drip.jpeg',
+    description: 'daily house blend coffee',
     category: 'coffee-style',
-    price: 14.00
+    price: 2.00
 };
-const viennese = {
-    id: 'viennese',
-    name: 'viennese'
-    image: ,
-    description: 'acidic and lightly sweet, cinnamon',
+const shotInTheDark = {
+    id: 'shot-in-the-dark',
+    name: 'shot-in-the-dark',
+    image: 'shot-dark.jpeg',
+    description: 'house blend coffee with a shot of espresso',
     category: 'coffee-style',
-    price: 16.00
+    price: 4.00
 };
-const fullCity = {
-    id: 'fullCity',
-    name: 'fullCity'
-    image: ,
-    description: 'tart, berries and nutmeg',
+const mocha = {
+    id: 'mocha',
+    name: 'mocha',
+    image: 'mocha.jpeg',
+    description: 'espresso and hot milk with Chocolate',
     category: 'coffee-style',
-    price: 13.00
+    price: 4.00
 };
-const halfCity = {
-    id: 'halfCity',
-    name: 'halfCity'
-    image: ,
-    description: 'slightly sweet, spiced with nutmeg and cinnamon',
+const americano = {
+    id: 'americano',
+    name: 'americano',
+    image: 'americano.jpeg',
+    description: 'espresso over water',
     category: 'coffee-style',
-    price: 11.00
+    price: 3.00
 };
 
 const coffee = [
-    italian,
-    french,
-    ethiopian,
-    guatemalan,
-    halfCity,
-    fullCity,
-    viennese
+    cappuchino,
+    macchiato,
+    pourOver,
+    drip,
+    shotInTheDark,
+    mocha,
+    americano
     ];
 
 

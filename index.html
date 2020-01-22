@@ -1,26 +1,31 @@
+  
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Fruit Stand</title>
-    <link rel="stylesheet" href="common/main.css">
+    <title>Awake Water Coffee</title>
+    <link rel="stylesheet" href="../common/main.css">
+    <link rel="stylesheet" href="products.css">
 </head>
 <body>
-    <header>
-        <h1>Awake Water Coffee</h1>
-    </header>
+        <header id="head-bar">
+            <h1>Awake Water Coffee</h1>
+            <nav>
+                <a href="../" class="nav-image">Home</a>
+                <a href="products" class="nav-image">Buy Coffee</a>
+            </nav>
+        </header>
+        <div id='background'>
+        <main id="main-box">
+            <img src="../assets/coffee-shop.jpeg" alt="coffee shop image">
 
-    <main>
-        <section class="centered">
-            <p>
-                <img class="hero-image" src="assets/fruit-stand.png">
-            </p>
-            <p>
-                <a href="products">Buy Fruit</a>
-            </p>
-        </section>
-    </main>
+            <h2>Coffee</h2>
+            <ul id="coffee">
+            </ul>
+        </main>
+    <script src="products.js" type="module"></script>
+</div>
 </body>
 </html>

@@ -1,32 +1,43 @@
-// create function to create new fruit
-const renderCoffee = (someCoffee) => {
+function renderCoffee(someCoffee) {
     const coffeeLi = document.createElement('li');
-    // add the tree-fruit class
-    coffeeLi.classList.add ('coffee-style');
+    coffeeLi.className = someCoffee.category;
     coffeeLi.title = someCoffee.description;
+
     const coffeeH3 = document.createElement('h3');
-    // add red apple to the header
     coffeeH3.textContent = someCoffee.name;
+    coffeeLi.appendChild(coffeeH3);
+
+
     const coffeeImg = document.createElement('img');
-    // define the image source and alt text
-    coffeeImg.src = '../assets/apple.png';
+    coffeeImg.src = '../assets/' + someCoffee.image;
     coffeeImg.alt = someCoffee.image;
+    coffeeLi.appendChild(coffeeImg);
+
+    //fix price and button value.
     const coffeeP = document.createElement('p');
-    coffeeP.classList.add('price');
-    coffeeP.textContent = '$1.00'
-    // define the Add button
+    p.className = 'price';
+
+    const usd = '$' + someCoffee.price.toFixed(2);
+    coffeeP.textContent = usd;
+
     const button = document.createElementbyId('button');
     button.textContent = 'Add';
-    button.value = 'Add';
-    // writing those contents to the DOM
-    coffeeLi.appendChild(appleH3);
-    coffeeLi.appendChild(coffeeImg);
-    coffeeLi.appendChild(coffeePrice);
+    //button.value = ;
     coffeeP.appendChild(button);
-    }
-    const ul = document.getElementById('coffee');
-    const coffeeLi = renderCoffee(someCoffee)'
-    ul.appendChild(coffeeLi);
+
+    coffeeLi.appendChild(coffeeP);
+
+    return coffeeLi;
+
+
+}
+
+export default renderCoffee;
+    // const ul = document.getElementById('coffee');
+    // const coffeeLi = renderCoffee(someCoffee)'
+    // ul.appendChild(coffeeLi);
+    
+
     
     
     
@@ -44,8 +55,6 @@ const renderCoffee = (someCoffee) => {
     
     
     
-    
-    Message Kyle Devine (he/him)
     
     
     
