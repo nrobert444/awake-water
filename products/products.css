@@ -10,12 +10,11 @@
     list-style: none;
     position: relative;
     background:orange;
-    border: 3px solid #aaa;
+    border: 3px solid lightgray;
     border-radius: 5px;
-    width: 200px;
-    height: auto;
-    margin-right: 10px;
-    margin-bottom: 10px;
+    width: 300px;
+    height: 450px;
+    margin: 20px 20px 20px 20px;
     text-align: center;
     box-shadow: 1px 1px 2px #ccc;
     transition: transform 200ms ease-in-out;
@@ -27,17 +26,24 @@
 }
 
 #coffee li h3 {
-    font-size: 1.1rem;
+    font-size: 1.3rem;
     margin: 5px;
+    font-family: cochin;
+    border: solid 3px azure;
 }
 
 #coffee li img {
-    width: 50%;
+    width: 90%;
     height: 50%;
-    margin-top: 10px;
-    margin-bottom: 20px;
+    margin: 10px 10px 10px 10px;
     align-items: center;
     border: solid 2px black;
+}
+#coffee li h4 {
+    font-family: cochin;
+    font-size: 24px;
+    text-align: center;
+    margin: 5px;
 }
 
 .price {
@@ -46,20 +52,23 @@
     bottom: 0;
     left: 0; 
     right: 0;
-    margin-bottom: 5px;
-    margin-left: 5px;
-    margin-right: 5px;
-    padding: 3px;
+    margin: 0px 5px 5px 5px;
+    padding: 20px;
     display: flex;
     justify-content: space-evenly;
     align-items: center;
     font-weight: 600;
-    border: solid 3px black;
+    border: solid 3px azure;
+
 
 }
 
 .price button {
     transition: color 200ms ease-in-out;
+    width: 60%;
+    justify-content: space-evenly;
+    align-items: center;
+    
 }
 .price button:hover {
     background: #aaa;

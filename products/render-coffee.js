@@ -1,18 +1,22 @@
 function renderCoffee(someCoffee) {
     const coffeeLi = document.createElement('li');
     coffeeLi.className = someCoffee.category;
-    coffeeLi.title = someCoffee.description;
 
+    
     const coffeeH3 = document.createElement('h3');
     coffeeH3.textContent = someCoffee.name;
     coffeeLi.appendChild(coffeeH3);
-
-
+    
+    
     const coffeeImg = document.createElement('img');
     coffeeImg.src = '../assets/' + someCoffee.image;
     coffeeImg.alt = someCoffee.image;
     coffeeLi.appendChild(coffeeImg);
-
+    
+    const coffeeDesc = document.createElement('h4')
+    coffeeDesc.textContent = someCoffee.description;
+    coffeeLi.appendChild(coffeeDesc);
+    
     const coffeeP = document.createElement('p');
     coffeeP.className = 'price';
 
