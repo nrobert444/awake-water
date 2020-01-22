@@ -1,7 +1,7 @@
 
 const cappuchino = {
     id: 'cappuchino',
-    name: 'cappuchino',
+    name: 'Cappuchino',
     image: 'cappuchino.jpeg',
     description: 'espresso with steamed milk on top',
     category: 'coffee-style',
@@ -9,7 +9,7 @@ const cappuchino = {
 };
 const macchiato = {
     id: 'macchiato',
-    name: 'macchiato',
+    name: 'Macchiato',
     image: 'macchiato.jpeg',
     description: 'espresso with milk foam on top',
     category: 'coffee-style',
@@ -17,7 +17,7 @@ const macchiato = {
 };
 const pourOver = {
     id: 'pour-over',
-    name: 'pour-over',
+    name: 'Pour-over',
     image: 'pour-over.jpeg',
     description: 'dark roast brewed with chemex',
     category: 'coffee-style',
@@ -25,15 +25,15 @@ const pourOver = {
 };
 const drip = {
     id: 'drip',
-    name: 'drip',
-    image: 'drip.jpeg',
+    name: 'Drip',
+    image: 'drip-coffee.jpeg',
     description: 'daily house blend coffee',
     category: 'coffee-style',
     price: 2.00
 };
 const shotInTheDark = {
     id: 'shot-in-the-dark',
-    name: 'shot-in-the-dark',
+    name: 'Shot in the Dark',
     image: 'shot-dark.jpeg',
     description: 'house blend coffee with a shot of espresso',
     category: 'coffee-style',
@@ -41,7 +41,7 @@ const shotInTheDark = {
 };
 const mocha = {
     id: 'mocha',
-    name: 'mocha',
+    name: 'Mocha',
     image: 'mocha.jpeg',
     description: 'espresso and hot milk with Chocolate',
     category: 'coffee-style',
@@ -49,7 +49,7 @@ const mocha = {
 };
 const americano = {
     id: 'americano',
-    name: 'americano',
+    name: 'Americano',
     image: 'americano.jpeg',
     description: 'espresso over water',
     category: 'coffee-style',
@@ -67,7 +67,7 @@ const coffee = [
     ];
 
 
-
+export default coffee;
 
 
 // Pages

@@ -1,0 +1,67 @@
+* {
+    box-sizing: border-box;
+}
+#coffee {
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+}
+#coffee li {
+    list-style: none;
+    position: relative;
+    background:orange;
+    border: 3px solid #aaa;
+    border-radius: 5px;
+    width: 200px;
+    height: auto;
+    margin-right: 10px;
+    margin-bottom: 10px;
+    text-align: center;
+    box-shadow: 1px 1px 2px #ccc;
+    transition: transform 200ms ease-in-out;
+}
+
+#coffee li:hover {
+    box-shadow: 2px 2px 3px #bbb;
+    transform: translate3d(-1px, -1px, 0);
+}
+
+#coffee li h3 {
+    font-size: 1.1rem;
+    margin: 5px;
+}
+
+#coffee li img {
+    width: 50%;
+    height: 50%;
+    margin-top: 10px;
+    margin-bottom: 20px;
+    align-items: center;
+    border: solid 2px black;
+}
+
+.price {
+    font-size: 0.9rem;
+    position: absolute;
+    bottom: 0;
+    left: 0; 
+    right: 0;
+    margin-bottom: 5px;
+    margin-left: 5px;
+    margin-right: 5px;
+    padding: 3px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    font-weight: 600;
+    border: solid 3px black;
+
+}
+
+.price button {
+    transition: color 200ms ease-in-out;
+}
+.price button:hover {
+    background: #aaa;
+    color: white;
+}

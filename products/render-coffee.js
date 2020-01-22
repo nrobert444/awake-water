@@ -13,16 +13,15 @@ function renderCoffee(someCoffee) {
     coffeeImg.alt = someCoffee.image;
     coffeeLi.appendChild(coffeeImg);
 
-    //fix price and button value.
     const coffeeP = document.createElement('p');
-    p.className = 'price';
+    coffeeP.className = 'price';
 
     const usd = '$' + someCoffee.price.toFixed(2);
     coffeeP.textContent = usd;
 
-    const button = document.createElementbyId('button');
+    const button = document.createElement('button');
     button.textContent = 'Add';
-    //button.value = ;
+    button.value = coffee.id;
     coffeeP.appendChild(button);
 
     coffeeLi.appendChild(coffeeP);

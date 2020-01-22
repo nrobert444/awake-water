@@ -4,7 +4,7 @@ import renderCoffee from './render-coffee.js';
 const list = document.getElementById('coffee');
 
 for(let i = 0; i < coffee.length; i++) {
-    const coffee = coffee[i];
-    const dom = renderCoffee(coffee);
+    const coffeeOne = coffee[i];
+    const dom = renderCoffee(coffeeOne);
     list.appendChild(dom);
 }
