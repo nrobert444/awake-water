@@ -23,7 +23,7 @@ function renderTable(cartItem) {
     tabRow.appendChild(tabTotal);
     
     const tabOrderTotal = document.createElement('td');
-    tabOrderTotal.textContent = calcOrderTotal(cart, coffee);
+    tabOrderTotal.textContent = calcOrderTotal(cartItem.quantity, item.price);
 
     return tabRow;
 };
