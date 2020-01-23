@@ -7,3 +7,4 @@ cart.forEach((item) => {
     const dom = renderTable(item);
     tableBody.appendChild(dom);
 });
+
