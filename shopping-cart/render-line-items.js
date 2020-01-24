@@ -24,6 +24,7 @@ function renderTable(cartItem) {
     
     const tabOrderTotal = document.createElement('td');
     tabOrderTotal.textContent = calcOrderTotal(cartItem.quantity, item.price);
+    tabRow.appendChild(tabOrderTotal);
 
     return tabRow;
 };
