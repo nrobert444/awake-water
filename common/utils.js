@@ -1,9 +1,13 @@
  
  export function findById (id, arr) {
-      return arr.find((item) => {
-      return id === item.id
-    })
-  };
+  let match = null
+  arr.forEach((item) => {
+    if (id === item.id) {
+      match = item
+    }
+  })
+  return match
+}
 
 
 

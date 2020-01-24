@@ -1,3 +1,5 @@
+import { findById }  from "../common/utils.js";
+
 function renderCoffee(someCoffee) {
     const coffeeLi = document.createElement('li');
     coffeeLi.className = someCoffee.category;
@@ -25,7 +27,30 @@ function renderCoffee(someCoffee) {
 
     const button = document.createElement('button');
     button.textContent = 'Add';
-    button.value = coffee.id;
+    //button.value = someCoffee.id;
+    button.addEventListener('click', () => {
+        const getCart = localStorage.getItem('CART');
+        let shopCart;
+        if (getCart) {
+            shopCart = JSON.parse(getCart);
+        } else {
+            shopCart =[];
+        }
+        let lineItem = findById(someCoffee.id, shopCart);
+        if(!lineItem) {
+            lineItem = {
+                //is this right
+                id: someCoffee.id,
+                quantity: 1
+            };
+
+            shopCart.push(lineItem);
+        } else {
+            lineItem.quantity++;
+        };
+        const newCart = JSON.stringify(shopCart);
+        localStorage.setItem('CART', newCart);
+    })
     coffeeP.appendChild(button);
 
     coffeeLi.appendChild(coffeeP);

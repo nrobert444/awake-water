@@ -1,5 +1,5 @@
 import coffee from '../data/coffee.js';
-import { findById, calcLineItem, calcOrderTotal } from '../common/utils.js';
+import {calcOrderTotal , findById, calcLineItem } from '../common/utils.js';
 
 
 function renderTable(cartItem) {
@@ -21,10 +21,6 @@ function renderTable(cartItem) {
     const tabTotal = document.createElement('td');
     tabTotal.textContent = calcLineItem(cartItem.quantity, item.price);
     tabRow.appendChild(tabTotal);
-    
-    // const totalCell = document.createElement('td');
-    // totalCell.textContent = calcOrderTotal(cartItem.quantity, item.price);
-    // tabRow.appendChild(totalCell);
 
     return tabRow;
 };
