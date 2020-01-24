@@ -1,0 +1,9 @@
+* {
+    box-sizing: border-box;
+}
+#cart-table {
+    background-color: white;
+    width: 50%;
+    border: solid 3px yellow;
+    text-align: center;
+}
