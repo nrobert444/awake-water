@@ -22,9 +22,9 @@ function renderTable(cartItem) {
     tabTotal.textContent = calcLineItem(cartItem.quantity, item.price);
     tabRow.appendChild(tabTotal);
     
-    const tabOrderTotal = document.createElement('td');
-    tabOrderTotal.textContent = calcOrderTotal(cartItem.quantity, item.price);
-    tabRow.appendChild(tabOrderTotal);
+    // const totalCell = document.createElement('td');
+    // totalCell.textContent = calcOrderTotal(cartItem.quantity, item.price);
+    // tabRow.appendChild(totalCell);
 
     return tabRow;
 };
