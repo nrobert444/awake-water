@@ -9,11 +9,19 @@
   return match
 }
 
+export function toUSD(number) {
+  return number.toLocaleString('en-US', {
+    style: 'currency',
+    currency: 'USD'
+
+  });
+}
+
 
 
 export function calcLineItem(quantity, price) {
     const amount = quantity * price;
-    return roundCurrency(amount);
+    return roundCurrency(amount).toFixed(2);
 };
     
 export function roundCurrency(amount) {
@@ -26,8 +34,7 @@ export function calcOrderTotal(cart, coffee) {
         const lineItem = cart[i];
         const findItem = findById(lineItem.id, coffee); 
         const lineTotal = calcLineItem(lineItem.quantity, findItem.price);
-         orderTotal += lineTotal;   
-    }
+         orderTotal += Number(lineTotal);     }
 
     return roundCurrency(orderTotal);
 };

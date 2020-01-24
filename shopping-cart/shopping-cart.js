@@ -1,35 +1,27 @@
 import coffee from '../data/coffee.js';
 import renderTable from './render-line-items.js';
-import { calcOrderTotal } from '../common/utils.js';
+import { calcOrderTotal, toUSD } from '../common/utils.js';
+import { clearCart, getCart } from './cart-api.js';
 
 const tableBody = document.getElementById('table-generate');
 const orderTotalCell = document.getElementById('order-total-cell');
 const placeOrderButton = document.getElementById('place-order-button');
 
-const getCart = localStorage.getItem('CART');
-let shopCart;
-if (getCart) {
-    shopCart = JSON.parse(getCart);
-}
-else {
-    shopCart = [];
-}
+const shoppingCart = getCart();
 
-shopCart.forEach((item) => {
+shoppingCart.forEach((item) => {
     const dom = renderTable(item);
     tableBody.appendChild(dom);
 });
 
+const orderTotal = calcOrderTotal(shoppingCart, coffee);
+orderTotalCell.textContent = toUSD(orderTotal);
 
-const orderTotal = calcOrderTotal(shopCart, coffee);
-orderTotalCell.textContent = orderTotal;
-
-if (shopCart.length === 0) {
+if (shoppingCart.length === 0) {
     placeOrderButton.disabled = true;
 }
 else {
     placeOrderButton.addEventListener('click', () => {
-        localStorage.removeItem('CART');
-        window.location = '../';
-    });
-}
+        clearCart();
+    })
+};
