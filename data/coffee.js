@@ -70,10 +70,3 @@ const coffee = [
 export default coffee;
 
 
-// Pages
-// The primary focus today is the product page (products). However, you should slot in a simple home page (index.html), which should have a link to the product page.
-
-// You should also have common/main.css used by all pages, as well as a page-specific css page (like products/products.css).
-
-// Product Page
-// The goal for today is to generate a list of products from product data.

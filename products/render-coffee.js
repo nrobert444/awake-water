@@ -1,3 +1,5 @@
+import { getCart, addItem} from '../shopping-cart/cart-api.js';
+
 function renderCoffee(someCoffee) {
     const coffeeLi = document.createElement('li');
     coffeeLi.className = someCoffee.category;
@@ -25,24 +27,20 @@ function renderCoffee(someCoffee) {
 
     const button = document.createElement('button');
     button.textContent = 'Add';
-    button.value = coffee.id;
-    coffeeP.appendChild(button);
+    button.value = someCoffee.id;
+    button.addEventListener('click', () => {
+        const shoppingCart = getCart();
+        addItem(shoppingCart, someCoffee.id);
+    })
 
+    coffeeP.appendChild(button);
     coffeeLi.appendChild(coffeeP);
 
     return coffeeLi;
-
-
 }
 
 export default renderCoffee;
-    // const ul = document.getElementById('coffee');
-    // const coffeeLi = renderCoffee(someCoffee)'
-    // ul.appendChild(coffeeLi);
-    
 
-    
-    
     
     
     
